@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="#" th:href="@{/css/bootstrap5-2-2.css}" 
+    th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"/>
+    <link rel='stylesheet' type='text/css' media='screen' href="#" th:href="@{/css/login.css}" />
+    
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css?fbclid=IwAR1YsW4Cd3uJltNc6k1kJ8R9VzNjmSXk9rjmW32BPoA6LWxNrZBCUY-D4i8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+   
+  
+
+    <title>Login</title>
+</head>
+
+<body>
+
+<h1>Custom login form</h1>
+<span th:if="${errorMessage}" th:text="${errorMessage}">Error</span>
+<!-- <form>  -->
+<form action="#" th:action="@{/login}" th:object="${userDTO}" method="post"> 
+User name: <input th:field="*{userName}" type="text" name="userName"/>
+Password: <input th:field="*{password}" type="password" name="password"/>
+<button type="submit">Log In</button>
+</form>
+
+
+  
+</body>
+</html>
